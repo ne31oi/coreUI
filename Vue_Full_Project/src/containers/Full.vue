@@ -1,7 +1,7 @@
 <template>
   <div class="app-viewport" id="file-list">
     <!--SIDEBAR-->
-    <md-sidenav class="md-left md-fixed" ref="sidebar" :class="{'md-left-rtl':rtl}">
+    <md-sidenav class="md-left md-fixed" ref="sidebar" :class="{'md-sidenav-rtl':rtl}">
       <md-sidenav-content>
         <md-toolbar class="md-account-header">
           <md-list class="md-transparent">
@@ -148,12 +148,60 @@
     margin-top: 28px;
   }
 
-  .md-sidenav.md-left-rtl .md-sidenav-content {
-    right: 0;
-    transform: translate(100%,  0);
+  /*RTL*/
+  /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  .md-sidenav-rtl.md-left .md-sidenav-content {
+    right: 0 !important;
+    transform: translate3D(100%, 0, 0) !important;
   }
-  .md-sidenav.md-right-rtl .md-sidenav-content {
-   left: 0;
-    transform: translate3D(100%, 0, 0);
+
+  .md-sidenav-rtl.md-right .md-sidenav-content {
+    left: 0 !important;
+    transform: translate3D(-100%, 0, 0) !important;
+  }
+
+  .md-sidenav-rtl.md-fixed .md-sidenav-content,
+  .md-sidenav-rtl.md-fixed .md-sidenav-backdrop {
+    position: fixed !important;
+  }
+
+  .md-sidenav-rtl .md-sidenav-content {
+    width: 304px !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    transition-property: transform !important;
+    will-change: transform !important;
+  }
+
+  .md-sidenav-rtl .md-backdrop {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 99 !important;
+    pointer-events: none !important;
+    background-color: rgba(0, 0, 0, 0.54) !important;
+    opacity: 0 !important;
+    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1) !important;
+    transition-property: opacity !important;
+    will-change: opacity !important;
+  }
+
+  .md-sidenav-rtl.md-active .md-sidenav-content {
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12) !important;
+    pointer-events: auto !important;
+    transform: translate3D(0, 0, 0) !important;
+  }
+
+  .md-sidenav-rtl.md-active .md-sidenav-backdrop {
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 </style>
