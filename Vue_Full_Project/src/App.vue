@@ -9,6 +9,7 @@ export default {
 </script>
 
 <style>
+
   // Import Font Awesome Icons Set
   $fa-font-path: "~font-awesome/fonts/";
   @import "~font-awesome/css/font-awesome.min.css";
@@ -17,6 +18,9 @@ export default {
   @import "~simple-line-icons/css/simple-line-icons.css";
 </style>
 <style lang="scss">
+
+
+
   // Import Main styles for this application
   @import "./scss/style";
 </style>

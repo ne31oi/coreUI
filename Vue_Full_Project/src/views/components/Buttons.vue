@@ -6,18 +6,12 @@
           <div slot="header">
             <strong>Options</strong>
           </div>
-          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-          <b-button variant="primary">Primary</b-button>
-          <!-- Secondary, outline button -->
-          <b-button variant="secondary">Secondary</b-button>
-          <!-- Indicates a successful or positive action -->
-          <b-button variant="success">Success</b-button>
-          <!-- Indicates caution should be taken with this action -->
-          <b-button variant="warning">Warning</b-button>
-          <!-- Indicates a dangerous or potentially negative action -->
-          <b-button variant="danger">Danger</b-button>
-          <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-          <b-button variant="link">Link</b-button>
+          <small>Raised</small>
+          <md-button class="md-raised">Default</md-button>
+          <md-button class="md-raised" :md-ripple="false">Ripple Off</md-button>
+          <md-button class="md-raised md-primary">Primary</md-button>
+          <md-button class="md-raised md-accent">Accent</md-button>
+          <md-button class="md-raised" disabled>Disabled</md-button>
         </b-card>
         <b-card>
           <div slot="header">

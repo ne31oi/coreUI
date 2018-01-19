@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <nav class="sidebar-nav">
+    <nav class="sidebar-nav" ref="sidebar">
       <div slot="header"></div>
       <ul class="nav">
         <li class="nav-item" v-for="(item, index) in navItems">

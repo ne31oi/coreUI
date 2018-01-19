@@ -1,24 +1,24 @@
 <template>
   <div class="animated fadeIn">
     <div class="row">
-      <div class="col-sm-6 col-lg-3">
-        <b-card class="bg-primary" :no-block="true">
-          <div class="card-body pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-            <h4 class="mb-0">9.823</h4>
-            <p>Members online</p>
-          </div>
-          <card-line1-chart-example class="chart-wrapper px-3" style="height:70px;" height="70"/>
-        </b-card>
-      </div><!--/.col-->
+      <md-card class="md-primary md-elevation-24">
+        <md-card-header>
+          <md-card-header-text>
+            <div class="md-title">Primary color</div>
+            <div class="md-subhead">Subtitle here</div>
+          </md-card-header-text>
+
+          <md-card-media>
+            <img src="/assets/examples/avatar-2.jpg" alt="Avatar">
+          </md-card-media>
+        </md-card-header>
+
+        <md-card-actions>
+          <md-button>Action</md-button>
+          <md-button>Action</md-button>
+        </md-card-actions>
+        <md-button class="md-primary md-raised" @click="movie = 'pulp-fiction'">Set Pulp Fiction</md-button>
+      </md-card>
       <div class="col-sm-6 col-lg-3">
         <b-card class="bg-info" :no-block="true">
           <div class="card-body pb-0">
